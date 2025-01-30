@@ -1,0 +1,346 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.fixed-menu {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.menu-item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  color: #333;
+}
+
+.menu-item:hover {
+  transform: scale(1.2);
+  color: #667eea;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+h2 {
+  padding: 30px 0px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  color: white;
+  text-align: left;
+  overflow: hidden;
+  background-image: url('images/GeminiOncaPintada.jpeg');
+  background-size: cover;
+  background-position: center;
+  padding: 30px 50px;
+
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.btn-hero {
+  padding: 15px 30px;
+  background: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background 0.3s ease;
+}
+
+.btn-hero:hover {
+  background: #45a049;
+}
+
+/* Seções */
+.section {
+  padding: 80px 0;
+  opacity: 0;
+  /* transform: translateY(20px); */
+  transition: opacity 1.6s ease, transform 1.6s ease;
+}
+
+.section.fade-in {
+  opacity: 1;
+  /* transform: translateY(0); */
+}
+
+.bg-light {
+  background: #f9f9f9;
+}
+
+/* Sobre a Onça-Pintada */
+.about-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+/* Habitat e Comportamento */
+.habitat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.habitat-card {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.habitat-card i {
+  font-size: 2rem;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.habitat-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Conservação */
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+}
+
+.btn-primary {
+  background: #4CAF50;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #45a049;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #4CAF50;
+  color: #4CAF50;
+}
+
+.btn-secondary:hover {
+  background: #4CAF50;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #4CAF50;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    margin-top: 20px;
+  }
+
+  .habitat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn-hero {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .habitat-card {
+    padding: 15px;
+  }
+
+  .habitat-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .habitat-card p {
+    font-size: 0.9rem;
+  }
+}
+
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  gap: 10px;
+  scrollbar-width: none;
+  align-items: center;
+}
+
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery img {
+  width: calc(100% / 3.5);
+  height: 600px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  border-radius: 8px;
+  object-fit: cover;
+
+}
+
+@media screen and (max-width: 768px) {
+  .gallery img {
+    width: calc(100% / 1.2);
+  }
+
+}

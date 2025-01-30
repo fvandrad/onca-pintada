@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onça-Pintada - O Guardião das Florestas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body id="top">
+
+    <div class="fixed-menu">
+        <div class="menu-item">
+            <a href="#top">
+                <i class="fas fa-home" title="Home"></i>
+            </a>
+        </div>
+        <div class="menu-item">
+            <a href="#about">
+                <i class="fas fa-info-circle" title="Sobre"></i>
+            </a>
+        </div>
+        <div class="menu-item">
+            <a href="#habitat">
+                <i class="fas fa-leaf" title="Habitat"></i>
+            </a>
+        </div>
+        <div class="menu-item">
+            <a href="#gallery">
+                <i class="fas fa-images" title="Galeria"></i>
+            </a>
+        </div>
+        <div class="menu-item">
+            <a href="#conservation">
+                <i class="fas fa-clipboard-check" title="Conservação"></i>
+            </a>
+        </div>
+        <div class="menu-item">
+            <a href="https://fvandrad.github.io/">
+                <i class="fas fa-star" title="Inspiração"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Onça-Pintada</h1>
+            <p>O majestoso guardião das florestas das Américas.</p>
+            <a href="#about" class="btn-hero">Explore</a>
+        </div>
+        <div class="hero-overlay"></div>
+        <!-- <video autoplay muted loop class="hero-video">
+            <source src="onca-video.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
+        </video> -->
+    </section>
+
+    <!-- Sobre a Onça-Pintada -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Sobre a Onça-Pintada</h2>
+
+                    <p>A onça-pintada (<em>Panthera onca</em>) é o maior felino das Américas e um símbolo de força e
+                        beleza. Encontrada em habitats como a Amazônia, o Pantanal e o Cerrado, ela desempenha um papel
+                        crucial no equilíbrio dos ecossistemas.</p>
+                    <p>Infelizmente, a onça-pintada está ameaçada pela perda de habitat e pela caça ilegal. Sua
+                        conservação é essencial para a biodiversidade.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/GeminiOncaPintada1.jpeg" alt="Onça-Pintada" class="responsive-img" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habitat e Comportamento -->
+    <section id="habitat" class="section bg-light">
+        <div class="container">
+            <h2>Habitat e Comportamento</h2>
+            <div class="habitat-grid">
+                <div class="habitat-card">
+                    <i class="fas fa-tree"></i>
+                    <h3>Florestas Tropicais</h3>
+                    <p>A onça-pintada é encontrada em florestas densas, onde pode caçar e se camuflar com facilidade.
+                    </p>
+                </div>
+                <div class="habitat-card">
+                    <i class="fas fa-paw"></i>
+                    <h3>Caçadora Solitária</h3>
+                    <p>Ela é um predador solitário, conhecido por sua força e habilidade de caça.</p>
+                </div>
+                <div class="habitat-card">
+                    <i class="fas fa-water"></i>
+                    <h3>Áreas Alagadas</h3>
+                    <p>Também habita regiões como o Pantanal, onde é comum vê-la próxima a rios e lagos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="habitat" class="section">
+        <div class="container">
+            <h2>Galeria de Imagens</h2>
+
+<div id="gallery" class="gallery">
+        <img src="images/GeminiOncaPintada2.jpeg" alt="Onça-Pintada" loading="lazy">
+        <img src="images/GeminiOncaPintada3.jpeg" alt="Onça-Pintada" loading="lazy">
+        <img src="images/GeminiOncaPintada4.jpeg" alt="Onça-Pintada" loading="lazy">
+        <img src="images/GeminiOncaPintada5.jpeg" alt="Onça-Pintada" loading="lazy">
+        <img src="images/GeminiOncaPintada6.jpeg" alt="Onça-Pintada" loading="lazy">
+        <img src="images/GeminiOncaPintada7.jpeg" alt="Onça-Pintada" loading="lazy">
+        <img src="images/GeminiOncaPintada8.jpeg" alt="Onça-Pintada" loading="lazy">
+    </div>
+        </div>
+    </section>
+
+    <!-- Conservação -->
+    <section id="conservation" class="section">
+        <div class="container">
+            <h2>Conservação</h2>
+            <p>A onça-pintada está ameaçada de extinção. Existem atualmente projetos de monitoramento que ajuda proteger esse animal incrível.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 - Todos os direitos reservados.</p>
+            <!-- <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div> -->
+        </div>
+    </footer>
+
+    <!-- Script para animações -->
+    <script>
+        document.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight * 0.8) {
+                section.classList.add('fade-in');
+            }
+        });
+    });
+    </script>
+</body>
+
+</html>
