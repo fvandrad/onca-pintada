@@ -1,6 +1,6 @@
 # 🐆 Onça-Pintada - O Guardião das Florestas 
 
-Um projeto educativo e informativo sobre a onça-pintada, focado em sua importância e necessidade de conservação.
+Um projeto de aprendizado, educativo e informativo sobre a onça-pintada, focado em sua importância e necessidade de conservação.
 
 ## 📄 Sobre o Projeto
 
