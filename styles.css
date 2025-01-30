@@ -338,6 +338,13 @@ footer {
 
 }
 
+@media screen and (max-width: 1024px) {
+  .gallery img {
+    width: calc(100% / 2.2);
+  }
+
+}
+
 @media screen and (max-width: 768px) {
   .gallery img {
     width: calc(100% / 1.2);
